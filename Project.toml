@@ -1,0 +1,13 @@
+name = "LTEI_TA"
+uuid = "628a513c-6438-4b21-9ca0-d4d947d21b65"
+authors = ["Siwar Badreddine"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
