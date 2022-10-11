@@ -1,3 +1,5 @@
+#License is MIT: https://github.com/sbadred/LTEI_TA.jl/blob/99b988ec2d84266e51a5a9b6a5acaf190c26e019/LICENSE
+
 """function to compute khatri-rao product"""
 
 function dotkron(B::Matrix{Float64},C::Matrix{Float64},D::Matrix{Float64})

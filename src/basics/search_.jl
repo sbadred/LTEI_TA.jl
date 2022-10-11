@@ -1,3 +1,5 @@
+#License is MIT: https://github.com/sbadred/LTEI_TA.jl/blob/99b988ec2d84266e51a5a9b6a5acaf190c26e019/LICENSE
+
 function search_(N::Int64,Atoms::Array{atom,1})
     l=1;res=0;
     size_=0;minus=0;

@@ -1,4 +1,3 @@
-Pkg.activate(".")
 using LTEI_TA
 using Test
 using BenchmarkTools
@@ -11,7 +10,7 @@ mat"addpath('/Users/sbadredd/Desktop/low-rank-two-electron-integrals/SOLVER/cheb
 #Test time computation of Chebyshev coefficients
 @testset "Test_coeff" begin
     file_name1="data/Molecules/CO2.xlsx"
-    @time Atoms,Mol=mol_prop(file_name1)
+    @timev Atoms,Mol=mol_prop(file_name1)
     Nb=Mol.Nb;
 
     boite=[-10,10]
@@ -25,7 +24,7 @@ mat"addpath('/Users/sbadredd/Desktop/low-rank-two-electron-integrals/SOLVER/cheb
 
     ##Normal coeff
     @info "$(now()) Evaluate Coeff"
-    @btime Coeff=create_coeff($t,$boite,$n1)
+    @timev Coeff=create_coeff(t,boite,n1)
 
 
     ##Adaptatif coeff
@@ -50,5 +49,5 @@ mat"addpath('/Users/sbadredd/Desktop/low-rank-two-electron-integrals/SOLVER/cheb
     m=collect(with_replacement_combinations(1:length(cluster),2));
     m= collect(hcat(m...)');
     @info "$(now()) Evaluate Coeff"
-    @btime Coeff=create_coeff($t,$cluster,$n1,$m)
+    @timev Coeff=create_coeff(t,cluster,n1,m)
 end

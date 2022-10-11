@@ -1,3 +1,5 @@
+#License is MIT: https://github.com/sbadred/LTEI_TA.jl/blob/99b988ec2d84266e51a5a9b6a5acaf190c26e019/LICENSE
+
     """This functions read files in xyz form and convert them to useful data
     to tackle"""
 

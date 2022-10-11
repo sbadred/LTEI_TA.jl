@@ -1,3 +1,6 @@
+#License is MIT: https://github.com/sbadred/LTEI_TA.jl/blob/99b988ec2d84266e51a5a9b6a5acaf190c26e019/LICENSE
+
+using DelimitedFiles
 function orbitalss(Nb::Int64,file_name2::String)
     Mo_read=readdlm(file_name2);
     Mo=zeros((Nb,Int(size(Mo_read,1)/Nb)))
@@ -13,6 +16,7 @@ function orbitalss(Nb::Int64,file_name2::String)
     end
     return Mo,L_
 end
+
 function orbitalss(Nb::Int64,file_name2::String)
     Mo_read=readdlm(file_name2);
     Mo=zeros((Nb,Int(size(Mo_read,1)/Nb)))

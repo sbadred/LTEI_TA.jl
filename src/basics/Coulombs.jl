@@ -1,3 +1,5 @@
+#License is MIT: https://github.com/sbadred/LTEI_TA.jl/blob/99b988ec2d84266e51a5a9b6a5acaf190c26e019/LICENSE
+
 function lookfor(a::Array{Int64,2},b::Array{Int64,2})
         output= zeros(Int64,0)
         for j in 1:size(a,1)

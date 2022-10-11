@@ -1,3 +1,5 @@
+#License is MIT: https://github.com/sbadred/LTEI_TA.jl/blob/99b988ec2d84266e51a5a9b6a5acaf190c26e019/LICENSE
+
 using FastGaussQuadrature
 """mapping gauss quadrature nodes weights from [-1 1] to [a b]:
 ##############################################################

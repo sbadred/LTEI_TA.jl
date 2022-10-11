@@ -1,3 +1,5 @@
+#License is MIT: https://github.com/sbadred/LTEI_TA.jl/blob/99b988ec2d84266e51a5a9b6a5acaf190c26e019/LICENSE
+
 function transform_(expo::Array{Float64,1},coeff::Array{Float64,1},R::Array{Float64,2},expo_::Array{Float64,1},coeff_::Array{Float64,1},R_::Array{Float64,2})
     c=kron(coeff,coeff_);
     e=expo .+ expo_';
