@@ -1,4 +1,4 @@
-name = "TEITensorizedapprox"
+name = "LTEI_TA"
 uuid = "628a513c-6438-4b21-9ca0-d4d947d21b65"
 authors = ["Siwar Badreddine"]
 version = "0.1.1"
