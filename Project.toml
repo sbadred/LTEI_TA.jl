@@ -25,9 +25,13 @@ XLSX = "fdbf4ff8-1666-58a4-91e7-1b58723a45e0"
 
 [compat]
 
+VegaLite = "2"
+#=======
+
 XLSX = "0.8"
-=======
+#=======
 Parameters = "0.12"
+
 
 julia = "1"
 
