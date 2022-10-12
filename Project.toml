@@ -25,6 +25,38 @@ XLSX = "fdbf4ff8-1666-58a4-91e7-1b58723a45e0"
 
 [compat]
 DataFrames = "1"
+#=======
+ 
+FastGaussQuadrature = "0.4"
+#=======
+ 
+TensorOperations = "3"
+#=======
+
+LowRankApprox = "0.5"
+#=======
+ 
+TSVD = "0.4"
+#=======
+ 
+FFTW = "1"
+#=======
+ 
+Kronecker = "0.5"
+#=======
+
+Revise = "3"
+#=======
+
+VegaLite = "2"
+#=======
+
+XLSX = "0.8"
+#=======
+Parameters = "0.12"
+
+ 
+ 
 julia = "1"
 
 [extras]
