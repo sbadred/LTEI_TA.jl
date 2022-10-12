@@ -1,7 +1,7 @@
 name = "LTEI_TA"
 uuid = "628a513c-6438-4b21-9ca0-d4d947d21b65"
 authors = ["Siwar Badreddine"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 Combinatorics = "861a8166-3701-5b0c-9a16-15d98fcdc6aa"
@@ -31,22 +31,22 @@ Combinatorics = "1"
 #=======
 DataFrames = "1"
 #=======
- 
+
 FastGaussQuadrature = "0.4"
 #=======
- 
+
 TensorOperations = "3"
 #=======
 
 LowRankApprox = "0.5"
 #=======
- 
+
 TSVD = "0.4"
 #=======
- 
+
 FFTW = "1"
 #=======
- 
+
 Kronecker = "0.5"
 #=======
 
@@ -60,7 +60,7 @@ XLSX = "0.8"
 #=======
 Parameters = "0.12"
 
- 
+
 
 julia = "1"
 
