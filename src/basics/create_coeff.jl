@@ -1,16 +1,6 @@
 #License is MIT: https://github.com/sbadred/LTEI_TA.jl/blob/99b988ec2d84266e51a5a9b6a5acaf190c26e019/LICENSE
 
-"""Create Chebyshev's coefficients matrices
-##############################################################
-Inputs:
--boite: Computational box
--t : quadrature nodes
--n1: number of interpolation nodes
 
-Output:
--Chebyshev's coefficients matrices
-##############################################################
-"""
 
 using LinearAlgebra
 include("../basics/Toolbox.jl")
@@ -31,6 +21,18 @@ function sv_trunc(s::Array{Float64},tol)
 	end
 end
 #simple case method
+"""
+##############################################################
+create_coeff: Create Chebyshev's coefficients matrices
+Inputs:
+-boite: Computational box
+-t : quadrature nodes
+-n1: number of interpolation nodes
+
+Output:
+-Chebyshev's coefficients matrices
+##############################################################
+"""
 function create_coeff(t::Array{Float64,1},boite::Array{Int64,1},
 	n1::Array{Int64,1};flag::Bool=true)
 

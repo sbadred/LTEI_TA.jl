@@ -9,6 +9,14 @@ function lookfor(a::Array{Int64,2},b::Array{Int64,2})
         output
 end
 
+"""
+##############################################################
+Coulombs!: gives back the product between M of size (Norb x Nb^2) and
+           Mo of size(Norb x Norb) by exploiting symmetries
+Inputs:
+-M, Mo,Nb, r1,r
+##############################################################
+"""
 function Coulombs!(M,Mo,Nb,r1,r;tol=1e-12)
     rsim=[1:Nb 1:Nb]
     RowIdx1=lookfor(rsim,r1);

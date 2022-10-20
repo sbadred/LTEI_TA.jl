@@ -3,9 +3,9 @@
 using Combinatorics
 """
 ##############################################################
-read_TEI: creates the TEI  tensor with analytical values
- from the fcidump file
-Input:
+read_TEI: creates the TEI of size (Nb^2 x Nb^2) tensor with
+          analytical values from the fcidump file
+Inputs:
 -fcidump_filename
 -orbital_count
 ##############################################################
@@ -41,9 +41,10 @@ function read_TEI(fcidump_filename::String,orbital_count::Int)::Array{Float64,2}
     return  collect(sparse(reshape(two_electron_integral_tensor,orbital_count^2,orbital_count^2)))
 end
 
-"""Function to exract values from the fcidump file
+"""
 ##############################################################
-Input:
+extract: exract values from the fcidump file
+Inputs:
 -file_name
 -Seed number
 -Nb number of basis functions
@@ -69,14 +70,15 @@ end
 
 """
 ##############################################################
-
-Input:
+extract_MO: Gives the matrix that contains the molecular
+            orbitals coefficients size (Norb x Norb)
+Inputs:
 -file_name
--N : Number of molecular orbitals
+-Norb : Number of molecular orbitals
 ##############################################################
 """
-function extract_MO(file_name::String,N::Int64)
-    Mo=zeros(N,N)
+function extract_MO(file_name::String,Norb::Int64)
+    Mo=zeros(Norb,Norb)
     lines=readlines(file_name)
     Threads.@threads for p=1:length(lines)
         tokens = split(lines[p])
@@ -92,9 +94,11 @@ end
 
 """
 ##############################################################
+Pairs: gives the set of pairs of basis functions (μ,ν)
 Input:
--file_name
--N : Number of molecular orbitals
+-Nb
+-Atoms
+-tau
 ##############################################################
 """
 #optimal number of pairs of basis

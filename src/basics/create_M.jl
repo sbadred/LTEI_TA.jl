@@ -16,6 +16,13 @@ include("../hierarchical/primitive_gauss.jl")
 include("../hierarchical/khatri_rao.jl")
 include("../hierarchical/Low.jl")
 ##
+"""
+##############################################################
+create_M: Create matrix M of size (Nb^2 x N) or size (Nb^2 x Norb)
+Inputs:
+-Nb, T, Atoms, prec,n1, r, boite
+##############################################################
+"""
 function create_M(Nb::Int64,T::Tuple{Array{Float64,1},Array{Float64,1}},
         Atoms::Array{atom,1},prec::Float64,n1::Array{Int64,1},
         r::Array{Int64,2},boite::Array{Int64,1},flag::Bool=false;low::Bool=false)

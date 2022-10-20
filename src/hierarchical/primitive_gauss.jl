@@ -1,6 +1,6 @@
 #License is MIT: https://github.com/sbadred/LTEI_TA.jl/blob/99b988ec2d84266e51a5a9b6a5acaf190c26e019/LICENSE
 
-"""function to return the maximum number of linear combination of
+""" Return the maximum number of linear combination of
 primitive gaussian"""
 ##
 function extract_prim(cluster::Array{clus,1},Atoms::Array{atom,1})

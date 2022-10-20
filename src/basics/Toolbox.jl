@@ -1,15 +1,18 @@
 #License is MIT: https://github.com/sbadred/LTEI_TA.jl/blob/99b988ec2d84266e51a5a9b6a5acaf190c26e019/LICENSE
 
 using FFTW
-"""Chebyshev nodes
-# Given an interval (a,b), calculates the associated n Chebyshev nodes.
-#
-# Input:
-# a,b= interval of interpolation : integers
-# n=number of interpolation points: integer
-#
-# Output:
-# nodes= nodes of chebyshev interpolation: vector in R^(n)"""
+"""
+##############################################################
+chebynodes: Given an interval (a,b), calculates
+            the associated n Chebyshev nodes.
+Inputs:
+-a,b= interval of interpolation : integers
+-n=number of interpolation points: integer
+
+Output:
+-nodes= nodes of chebyshev interpolation: vector in R^(n)
+##############################################################
+"""
 ##--------------------------------------------------------------------------
 function  chebynodes(a::Int64, b::Int64, n::Int64)
 
@@ -25,15 +28,20 @@ return nodes
 end
 
 ## Chebyshev polynomials
-"""Calculates the polynomials functions of N degree, interval [a,b]
-# Input:
-# x= vector
-# a,b= integers interval of interpolation.
-# N=number of interpolation points
-#
-# Output:
-# chebyplys= chebyshev's polynomials evaluates on the vector x: matrix in
-# R^(size(x,1)xN)"""
+"""
+##############################################################
+chebypoly: Calculates the polynomials functions of N degree,
+            interval [a,b]
+Inputs:
+-x= vector
+-a,b= integers interval of interpolation.
+-N=number of interpolation points
+
+Output:
+-chebyplys= chebyshev's polynomials evaluates on the vector x: matrix in
+            R^(size(x,1)xN)
+##############################################################
+"""
 #--------------------------------------------------------------------------
 function chebypoly(x::Array{Float64,1},a::Int64,b::Int64,N::Int64)
     # Necessary transformation to ensure that x lies in [-1,1]
@@ -76,13 +84,18 @@ function chebypoly(x::Number,a::Int64,b::Int64,N::Int64)
     chebypolys
 end
 ## 2D Chebyshev grid
-"""Calculates the [X,Y] grid obtained by the mesh of two vx, vy vectors.
-#Input:
-# a1,b1,a2,b2=intervals of 2D interpolation
-# n1,n2=number of interpolation points for each dimension
-#
-#OUtput:
-#[X,Y]= chebyshev's 2D grid: matrix in R^(n1,n2)"""
+"""
+##############################################################
+chebynodes_grid: Calculates the [X,Y] grid obtained by the mesh
+                 of two vx, vy vectors.
+Inputs:
+-a1,b1,a2,b2=intervals of 2D interpolation
+-n1,n2=number of interpolation points for each dimension
+
+OUtput:
+-[X,Y]= chebyshev's 2D grid: matrix in R^(n1,n2)
+##############################################################
+"""
 #--------------------------------------------------------------------------
 
 function chebynodes_grid(a1::Int64, b1::Int64, n1::Int64, a2::Int64, b2::Int64, n2::Int64)
@@ -94,16 +107,7 @@ A= meshgrid(vx',vy');
 return A
 end
 
-## 2D Spectral interpolation using FFT
-"""n1,n2: number of Chebyshev nodes
-# a1,a2: intervall [a1,b1], [a2,b2]
-# b1,b2: intervall [a1,b1], [a2,b2]
-# f: function to be interpolated, forme f
-#
-#Output:
-# coefficients2= matrix containing chebyshev's coefficients in R^(n1xn2)
-Reference:
-"""
+
 
 #--------------------------------------------------------------------------
 """Calculation of Chebyshev coefficients using the FFT method
@@ -114,6 +118,16 @@ Reference:
 *    Availability: https://github.com/xuzhibo/SpectralInterpolation
 *
 ***************************************************************************************
+"""
+# 2D Spectral interpolation using FFT
+"""n1,n2: number of Chebyshev nodes
+# a1,a2: intervall [a1,b1], [a2,b2]
+# b1,b2: intervall [a1,b1], [a2,b2]
+# f: function to be interpolated, forme f
+#
+#Output:
+# coefficients2= matrix containing chebyshev's coefficients in R^(n1xn2)
+Reference:
 """
 function coeff_fft(value::Array{Float64,2})
     N=size(value,2)-1

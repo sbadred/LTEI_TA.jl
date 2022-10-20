@@ -5,9 +5,10 @@ using Statistics
 include("../basics/search_.jl")
 include("../basics/transform_.jl")
 include("../basics/Toolbox.jl")
-"""Evaluation elemetn-wise fourth-order tensor
-using function solver_element_wise(args...)
+"""
 ##############################################################
+solver_element_wise: Evaluation elemetn-wise fourth-order tensor
+                     using function solver_element_wise(args...)
 Inputs:
 -Atoms: molecular data
 -analytics: reference values

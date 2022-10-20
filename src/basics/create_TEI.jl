@@ -67,6 +67,13 @@ end
 
 
 ##
+"""
+##############################################################
+create_TEI: Create matrix B of size (Nb^2 x Nb^2) (TEI)
+             or size (Norb x Norb)
+
+##############################################################
+"""
 #Without coeff compression
 function create_TEI(w::Array{Float64,1},coeff::Array{Any,2},M::Array{Float64,4}
         ,n1::Array{Int64,1};flag::Bool=true)
