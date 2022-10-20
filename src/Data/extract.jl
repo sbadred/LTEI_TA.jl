@@ -5,9 +5,8 @@ using Combinatorics
  from the fcidump file
 ##############################################################
 Input:
--file_name
--Seed number
--Nb number of basis functions
+-fcidump_filename
+-orbital_count
 ##############################################################
 """
 
