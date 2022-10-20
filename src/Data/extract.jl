@@ -1,9 +1,10 @@
 #License is MIT: https://github.com/sbadred/LTEI_TA.jl/blob/99b988ec2d84266e51a5a9b6a5acaf190c26e019/LICENSE
 
 using Combinatorics
-"""Function to  create the TEI tensor with analytical values
- from the fcidump file
+"""
 ##############################################################
+read_TEI: creates the TEI  tensor with analytical values
+ from the fcidump file
 Input:
 -fcidump_filename
 -orbital_count
@@ -65,7 +66,10 @@ function extract(file_name::String,Seed::Int64,Nb::Int64)
     end
     return analytics, vec_index
 end
-"""##############################################################
+
+"""
+##############################################################
+
 Input:
 -file_name
 -N : Number of molecular orbitals
@@ -85,6 +89,14 @@ function extract_MO(file_name::String,N::Int64)
 
 end
 
+
+"""
+##############################################################
+Input:
+-file_name
+-N : Number of molecular orbitals
+##############################################################
+"""
 #optimal number of pairs of basis
 function Pairs(Nb::Int64,Atoms::Array{LTEI_TA.atom,1};tau=1e-10)
     ##Create pairs of indices
