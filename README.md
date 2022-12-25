@@ -7,8 +7,7 @@
 
 ## Description 
 
-LTEI_TA is an approximation methods for the  numerical evaluation of the long-range Coulomb potential and  the  approximation of the resulting high dimensional Two-Electron Integrals tensor (TEI)  with  long-range interactions arising in molecular simulations. It exploits the tensorized structure of the compressed two-electron integrals obtained through two-dimensional Chebyshev interpolation combined with Gaussian quadrature.
-This is a prototype implementation in Julia.
+The long-range Coulomb potential is a significant factor in molecular simulations, and its accurate evaluation is essential for accurate results. The present study proposes an approximation method for the numerical evaluation of the long-range Coulomb potential and the approximation of the resulting high-dimensional Two-Electron Integrals (TEI) tensor with long-range interactions. This method is based on the tensorized structure of the compressed two-electron integrals, which are obtained through two-dimensional Chebyshev interpolation combined with Gaussian quadrature. This is a prototype implementation in the Julia programming language.
 
 ## Dependencies
 LTEI_TA uses a MATLAB function to find the optimal number of Chebyshev interpolation points
